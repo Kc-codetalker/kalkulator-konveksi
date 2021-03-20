@@ -22,14 +22,18 @@ def format_currency(amount):
     return formatted[:-1]
 
 def count_total(lst):
-    print("Lusin | Sisa |  Biaya  |  Subtotal")
-    print("------------------------------------")
+    dash_line = "------------------------------------------"
+    print("No. | Lusin | Sisa |  Biaya  |  Subtotal")
+    print(dash_line)
     total = 0
+    i = 0
     for job in lst:
-        print(job)
+        i += 1
+        print("{:3d} | {}".format(i, job))
         total += job.subtotal
-    print("------------------------------------ +")
-    print("                  Total: {:>10s}".format(format_currency(total)))
+        if not (i % 5): print(dash_line)
+    print(dash_line + " +")
+    print("                        Total: {:>10s}".format(format_currency(total)))
 
 def delete_last(lst, num):
     if (len(lst) == 0):
