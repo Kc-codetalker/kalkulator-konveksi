@@ -61,23 +61,23 @@ def main():
     while keep_asking:
         row = input(">>> ")
         row = row.split()
-        if (row[0] == 'exit' or row[0] == 'quit'):
+        if (row[0] in ['exit', 'quit', 'e', 'q']):
             job_list = list()
             keep_asking = False
-        elif (row[0] == 'undo'):
+        elif (row[0] in ['undo', 'u']):
             try:
                 num = int(row[1])
                 delete_last(job_list, num)
             except(IndexError):
                 print("Undo needs lst and num arguments!")
-        elif (row[0] == 'total'):
+        elif (row[0] in ['total', 't']):
             print("Nama: {}".format(worker_name))
             count_total(job_list)
-        elif (row[0] == 'reset'):
+        elif (row[0] in ['reset', 'r']):
             job_list = list()
             worker_name = ""
             print("============RESET============")
-        elif (row[0] == 'name' or row[0] == 'nama'):
+        elif (row[0] in ['name', 'nama', 'n']):
             worker_name = " ".join(row[1:])
         elif (len(row) == 3):
             lusin = int(row[0])
