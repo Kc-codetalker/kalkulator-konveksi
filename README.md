@@ -10,6 +10,8 @@ Berikut adalah prasyarat yang diperlukan pada sistem untuk dapat menggunakan _sc
 
 # Cara Menggunakan
 
+![Demo example](./readme-src/demo-1.gif)
+
 Pada bagian ini akan diuraikan perintah-perintah yang tersedia beserta contoh formatnya.
 
 ## Memulai _script_
