@@ -1,3 +1,5 @@
+import kalkulator_lusin as dozen
+
 class JobEntry:
     def __init__(self, lusin, sisa, nominal):
         self.lusin = lusin
@@ -51,7 +53,7 @@ def main():
     print("""=====================================
 ** Welcome to Konveksi Calculator! **
 =====================================""")
-    mode = input("""Please enter number below for which mode do you want to use.
+    mode = input("""Please enter one of the numbers below for which mode do you want to use.
     (1) Payroll calculator ("gajian")
     (2) Dozen calculator
     (0) Exit
@@ -65,10 +67,13 @@ def main():
     if (mode == 0):
         print("Exitting...")
     elif (mode == 1):
-        print("""You chose Payroll calculator.""")
+        print("You chose Payroll calculator.")
         payroll_calc_runner()
     elif (mode == 2):
-        print("Dozen calculator is still in development. Please choose other mode.")
+        print("You chose Dozen calculator.")
+        dozen.dozen_calc_runner()
+    else:
+        print("Please choose one of the available numbers.")
 
 
 def payroll_calc_runner():
