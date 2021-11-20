@@ -66,18 +66,18 @@ def main():
         print("Exitting...")
     elif (mode == 1):
         print("""You chose Payroll calculator.""")
-        print("""=====================================
-** Welcome to Konveksi Payroll Calculator! **
-
-* Type 'help' and Enter to show available commands.
-* Type 'exit' or 'quit' and Enter to exit..
-=====================================""")
         payroll_calc_runner()
     elif (mode == 2):
         print("Dozen calculator is still in development. Please choose other mode.")
 
 
 def payroll_calc_runner():
+    print("""=====================================
+** Welcome to Konveksi Payroll Calculator! **
+
+* Type 'help' and Enter to show available commands.
+* Type 'exit' or 'quit' and Enter to exit..
+=====================================""")
     keep_asking = True
     job_list = list()
     worker_name = ""
