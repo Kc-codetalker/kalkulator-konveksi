@@ -18,7 +18,7 @@ Pada bagian ini akan diuraikan perintah-perintah yang tersedia beserta contoh fo
 
 _Script_ dijalankan dengan memanggilnya melalui _command line interface_ atau _shell_.
 ```bash
-python kalkulator-konveksi.py
+python main.py
 ```
 Maka akan muncul antarmuka sederhana seperti ini.
 ```bash
