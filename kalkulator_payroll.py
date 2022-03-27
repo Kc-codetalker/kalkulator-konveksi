@@ -1,5 +1,3 @@
-import kalkulator_lusin as dozen
-
 class JobEntry:
     def __init__(self, lusin, sisa, nominal):
         self.lusin = lusin
@@ -49,33 +47,6 @@ def delete_last(lst, num):
         print("Removed {} {} {}.".format(job.lusin, job.sisa, job.nominal))
         lst.remove(job)
 
-def main():
-    print("""=====================================
-** Welcome to Konveksi Calculator! **
-=====================================""")
-    mode = input("""Please enter one of the numbers below for which mode do you want to use.
-    (1) Payroll calculator ("gajian")
-    (2) Dozen calculator
-    (0) Exit
->>>> """)
-    try:
-        mode = int(mode)
-    except:
-        print("Mode input should be a number!")
-        return
-
-    if (mode == 0):
-        print("Exitting...")
-    elif (mode == 1):
-        print("You chose Payroll calculator.")
-        payroll_calc_runner()
-    elif (mode == 2):
-        print("You chose Dozen calculator.")
-        dozen.dozen_calc_runner()
-    else:
-        print("Please choose one of the available numbers.")
-
-
 def payroll_calc_runner():
     print("""=====================================
 ** Welcome to Konveksi Payroll Calculator! **
@@ -121,6 +92,3 @@ def payroll_calc_runner():
             job_list.append(row_entry)
         else:
             print("Format masukan salah. Masukkan dengan format yang benar.")
-
-if __name__ == '__main__':
-    main()
